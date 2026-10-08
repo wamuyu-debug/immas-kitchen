@@ -1,0 +1,526 @@
+/* ================================
+   IMMA'S KITCHEN
+   Main Website Styles
+================================ */
+
+:root {
+  --red: #b52a2a;
+  --red-dark: #8f1f1f;
+  --gold: #f2c94c;
+  --gold-light: #fff0a8;
+  --cream: #fff8e8;
+  --cream-dark: #f5e8c8;
+  --black: #202020;
+  --white: #ffffff;
+}
+
+
+/* ================================
+   GENERAL
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Georgia", serif;
+  background: var(--cream);
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar {
+  height: 80px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--cream);
+  border-bottom: 1px solid rgba(181, 42, 42, 0.15);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+/* Brand */
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  color: var(--red);
+}
+
+.brand span {
+  font-size: 1.35rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.brand small {
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  color: var(--black);
+  margin-top: 5px;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--red);
+}
+
+
+/* Navigation button */
+
+.nav-button {
+  font-family: Arial, sans-serif;
+  background: var(--red);
+  color: var(--white);
+
+  padding: 12px 22px;
+  border-radius: 30px;
+
+  font-size: 0.85rem;
+  font-weight: bold;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.nav-button:hover {
+  background: var(--red-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(181, 42, 42, 0.25);
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  min-height: calc(100vh - 80px);
+
+  padding: 70px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+
+/* Hero text */
+
+.hero-content {
+  max-width: 600px;
+}
+
+.eyebrow {
+  font-family: Arial, sans-serif;
+  color: var(--red);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(3.2rem, 6vw, 5.8rem);
+  line-height: 0.95;
+  color: var(--black);
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: var(--red);
+}
+
+.hero-text {
+  font-family: Arial, sans-serif;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 35px;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 15px 27px;
+  border-radius: 30px;
+
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.primary-button {
+  background: var(--red);
+  color: white;
+}
+
+.primary-button:hover {
+  background: var(--red-dark);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(181, 42, 42, 0.25);
+}
+
+.secondary-button {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+.secondary-button:hover {
+  background: var(--red);
+  color: white;
+  transform: translateY(-4px);
+}
+
+
+/* Hero logo */
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+}
+
+.logo-circle {
+  width: 390px;
+  height: 390px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 25px 60px rgba(181, 42, 42, 0.18);
+
+  transition: transform 0.5s ease;
+}
+
+.logo-circle:hover {
+  transform: rotate(3deg) scale(1.03);
+}
+
+.logo-circle img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+
+/* ================================
+   MENU
+================================ */
+
+.menu-section {
+  padding: 110px 7%;
+  background: var(--white);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+  font-family: Arial, sans-serif;
+  color: #666;
+}
+
+
+/* Menu cards */
+
+.menu-grid {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.menu-card {
+  background: var(--cream);
+
+  padding: 35px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(181, 42, 42, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+.menu-card h3 {
+  color: var(--red);
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+
+/* Menu items */
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+
+  font-family: Arial, sans-serif;
+  font-size: 0.92rem;
+}
+.menu-item {
+  transition: transform 0.2s ease, padding-left 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: translateX(5px);
+  padding-left: 5px;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item span:last-child {
+  color: var(--red);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-section {
+  padding: 100px 7%;
+
+  background: var(--black);
+  color: var(--white);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 60px;
+}
+
+.contact-section .eyebrow {
+  color: var(--gold);
+}
+
+.contact-section h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  max-width: 600px;
+}
+
+.contact-info {
+  font-family: Arial, sans-serif;
+  line-height: 2.4;
+  font-size: 1rem;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  padding: 25px 7%;
+
+  background: var(--black);
+  color: #ccc;
+
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 60px 7%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-logo {
+    order: -1;
+  }
+
+  .logo-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: left;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 70px;
+  }
+
+  .brand span {
+    font-size: 1.1rem;
+  }
+
+  .nav-button {
+    padding: 10px 16px;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 45px 6% 70px;
+  }
+
+  .logo-circle {
+    width: 230px;
+    height: 230px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .menu-section {
+    padding: 75px 6%;
+  }
+
+  .menu-card {
+    padding: 25px 20px;
+  }
+
+  .menu-item {
+    font-size: 0.85rem;
+  }
+
+  .contact-section {
+    padding: 75px 6%;
+  }
+ .contact-section .contact-info a {
+  color: var(--gold) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-section .contact-info a:hover {
+  color: var(--gold-light) !important;
+  text-decoration: underline;
+}
+}
