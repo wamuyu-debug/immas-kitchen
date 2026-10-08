@@ -197,11 +197,12 @@ function App() {
   <p>
     💬 <strong>WhatsApp:</strong>{" "}
     <a
-      href="https://wa.me/254725444942"
+      href="https://wa.me/254725449492"
       target="_blank"
       rel="noopener noreferrer"
     >
-      0725 444 942
+      0725 449492
+
     </a>
   </p>
 
